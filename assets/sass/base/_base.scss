@@ -119,6 +119,16 @@ img {
     }
 }
 
+.px-60 {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    @media(max-width:991px){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
 
 /*** contact form error handling ***/
 .contact-validation-active {

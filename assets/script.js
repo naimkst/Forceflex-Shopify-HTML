@@ -411,12 +411,11 @@
             image1.attr('src', originalSrc);
         });
     }
-
     /*------------------------------------------
-       = testimonial-active
-   -------------------------------------------*/
-    if ($(".testimonial-active").length) {
-        $(".testimonial-active").owlCarousel({
+      category-active
+    -------------------------------------------*/
+    if ($(".category-active").length) {
+        $(".category-active").owlCarousel({
             autoplay: true,
             smartSpeed: 300,
             margin: 20,
@@ -425,25 +424,23 @@
             dots: false,
             navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
             nav: false,
-            loop: true,
-            autoWidth: true,
-            items: 4,
-
             responsive: {
                 0: {
                     items: 1,
-                    autoWidth: false,
                 },
 
-                500: {
+                350: {
                     items: 1,
+                },
+                500: {
+                    items: 2,
                 },
 
                 768: {
                     items: 2,
                 },
                 992: {
-                    items: 2,
+                    items: 3,
                 },
 
                 1200: {
@@ -456,8 +453,8 @@
 
             }
         });
-    }
 
+    }
 
     $(document).ready(function () {
         $('.product-popup').magnificPopup({
@@ -537,7 +534,17 @@
     });
 
 
+    gsap.registerPlugin(ScrollTrigger);
 
+    gsap.to('.zoom-image', {
+        scale: 1, // Scale to which you want to zoom in
+        scrollTrigger: {
+            trigger: '.multi-item',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+        },
+    });
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/
