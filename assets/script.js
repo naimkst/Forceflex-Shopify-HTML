@@ -497,7 +497,6 @@
     // Screen Width
     var screen_width = window.screen.width;
 
-    // Register GSAP Plugins
     gsap.registerPlugin(ScrollTrigger);
 
     // Active GSAP
@@ -533,9 +532,6 @@
         },
     });
 
-
-    gsap.registerPlugin(ScrollTrigger);
-
     gsap.to('.zoom-image', {
         scale: 1, // Scale to which you want to zoom in
         scrollTrigger: {
@@ -545,6 +541,35 @@
             scrub: true,
         },
     });
+
+    $(document).ready(function(){
+        function isHoveringClassRemove() {
+            return $('.class-remove:hover').length > 0;
+        }
+        $('.class-remove').hover(
+            function() {
+                $('.multi-section').removeClass('add-black');
+            }, function() {
+                if (!isHoveringClassRemove()) {
+                    $('.multi-section').addClass('add-black');
+                }
+            }
+        );
+    
+        $('.multi-item').hover(
+            function() {
+                if (!isHoveringClassRemove()) {
+                    $('.multi-section').addClass('add-black');
+                }
+            }, function() {
+                if (!isHoveringClassRemove()) {
+                    $('.multi-section').addClass('add-black');
+                }
+            }
+        );
+    });
+    
+
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/

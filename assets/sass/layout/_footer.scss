@@ -61,18 +61,15 @@
     }
 
     .widget-title {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         position: relative;
 
-        h3 {
+       span {
             color: $white;
             margin: 0;
             font-size: 14px;
             font-style: normal;
             line-height: 24px;
-            letter-spacing: 0.2px;
-            text-transform: uppercase;
-            letter-spacing: .125rem;
         }
     }
 
@@ -103,6 +100,41 @@
         }
     }
 
+    .newslatter-widget {
+        .logo {
+            max-width: 180px;
+        }
+
+        input {
+            width: 100%;
+            border-radius: 99px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, .2);
+            background: none;
+        }
+
+        form {
+            display: flex;
+
+            input {
+                max-width: 200px;
+                padding: 15px;
+
+                &:focus {
+                    color: $white;
+                }
+            }
+
+            button {
+                width: 120px;
+                background: $white;
+                font-weight: 600;
+                border: 0;
+                border-radius: 99px;
+            }
+        }
+    }
+
     .link-widget {
         overflow: hidden;
 
@@ -111,7 +143,7 @@
                 position: relative;
 
                 a {
-                    color: $white;
+                    color: rgb(128 128 128);;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -200,16 +232,17 @@
         }
 
         .copy-wrap {
-            text-align: center;
+            text-align: left;
         }
 
         .copyright {
             display: inline-block;
             font-size: 14px;
             margin: 0;
+            color: rgb(128, 128, 128);
 
             a {
-                color: $white;
+                color: rgb(128, 128, 128);
                 text-decoration: none;
             }
 
