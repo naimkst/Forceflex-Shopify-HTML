@@ -97,7 +97,6 @@ img {
 /* 1.2 Global Elements */
 .page-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .wow {
@@ -2895,6 +2894,30 @@ img {
   font-size: 40px;
   line-height: 1.1em;
 }
+.about-section .spacer {
+  height: 100vh;
+  background: lightgrey;
+}
+.about-section .image-sequence-container {
+  position: relative;
+  height: 100vh;
+}
+.about-section .image-sequence {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-section .image-sequence img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
 .about-section .about-image-wrap {
   display: flex;
   justify-content: center;
@@ -3255,7 +3278,7 @@ img {
 .multi-section {
   position: relative;
   z-index: 1;
-  padding-top: 150px;
+  padding-top: 250px;
   transition: all 0.3s;
   overflow: hidden;
 }

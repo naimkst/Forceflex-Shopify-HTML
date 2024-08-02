@@ -15,6 +15,34 @@
         }
     }
 
+    .spacer {
+        height: 100vh;
+        background: lightgrey;
+    }
+
+    .image-sequence-container {
+        position: relative;
+        height: 100vh;
+    }
+
+    .image-sequence {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .image-sequence img {
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+    }
+
     .about-image-wrap {
         display: flex;
         justify-content: center;
@@ -426,7 +454,7 @@
 .multi-section {
     position: relative;
     z-index: 1;
-    padding-top: 150px;
+    padding-top: 250px;
     transition: all .3s;
     overflow: hidden;
 
@@ -531,7 +559,7 @@
         max-width: 670px;
         margin: 0 auto;
 
-        @media(max-width:575px){
+        @media(max-width:575px) {
             max-width: 350px;
         }
 
@@ -539,6 +567,7 @@
         .part-img2,
         .part-bottom {
             position: relative;
+
             .info {
                 position: absolute;
                 left: 29%;
@@ -571,7 +600,7 @@
                     visibility: hidden;
                     transition: all .3s;
 
-                    @media(max-width:1199px){
+                    @media(max-width:1199px) {
                         left: 51%;
                         width: 200px;
                         text-align: center;
@@ -604,8 +633,8 @@
 
                     .info-text {
                         left: 110%;
-                        
-                        @media(max-width:1199px){
+
+                        @media(max-width:1199px) {
                             left: 50%;
                             transform: translateX(-50%);
                             top: 105%;
@@ -634,7 +663,7 @@
                 .part-img {
                     width: 245px;
 
-                    @media(max-width:575px){
+                    @media(max-width:575px) {
                         width: 155px;
                     }
                 }
@@ -645,7 +674,7 @@
                     top: 0;
                     width: 245px;
 
-                    @media(max-width:575px){
+                    @media(max-width:575px) {
                         width: 155px;
                     }
                 }
@@ -657,7 +686,8 @@
 
                 .part-img {
                     width: 245px;
-                    @media(max-width:575px){
+
+                    @media(max-width:575px) {
                         width: 155px;
                     }
                 }
@@ -667,7 +697,8 @@
                     left: -50px;
                     top: 0;
                     width: 245px;
-                    @media(max-width:575px){
+
+                    @media(max-width:575px) {
                         width: 155px;
                     }
                 }
@@ -679,16 +710,18 @@
         .part-bottom {
             max-width: 460px;
             margin: 0 auto;
-    
+
             .info {
                 left: 35%;
+
                 &.s2 {
                     right: 35%;
                 }
+
                 .info-text {
                     width: 370px;
 
-                    @media(max-width:1199px){
+                    @media(max-width:1199px) {
                         left: 50%;
                         transform: translateX(-50%);
                         top: 105%;
@@ -698,15 +731,15 @@
                     }
                 }
             }
-    
+
             img {
                 filter: invert(1);
             }
-    
+
             .part-img2 {
                 margin-top: -95px;
 
-                @media(max-width:575px){
+                @media(max-width:575px) {
                     margin-top: -50px;
                 }
 
@@ -717,7 +750,7 @@
                     transform: translateX(-50%);
                 }
             }
-    
+
         }
     }
 
@@ -728,7 +761,7 @@
         margin: 0 auto;
         margin-top: -80px;
 
-        @media(max-width:575px){
+        @media(max-width:575px) {
             margin-top: -40px;
         }
 
@@ -736,10 +769,10 @@
             filter: invert(1);
             max-width: 280px;
 
-            @media(max-width:575px){
-               max-width: 150px;
+            @media(max-width:575px) {
+                max-width: 150px;
             }
-    
+
         }
     }
 }

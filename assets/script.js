@@ -510,27 +510,27 @@
         });
     }
 
-    gsap.set(".dotsBlue", { yPercent: -10 });
-    gsap.set(".clusterGreat", { yPercent: 20 });
+    // gsap.set(".dotsBlue", { yPercent: -10 });
+    // gsap.set(".clusterGreat", { yPercent: 20 });
 
-    gsap.to(".dotsBlue", {
-        yPercent: 10,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".clusterGreat",
-            scrub: 1
-        },
-    });
+    // gsap.to(".dotsBlue", {
+    //     yPercent: 10,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".clusterGreat",
+    //         scrub: 1
+    //     },
+    // });
 
-    gsap.to(".clusterGreat", {
-        yPercent: 5,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".clusterGreat",
-            end: "bottom center",
-            scrub: 1
-        },
-    });
+    // gsap.to(".clusterGreat", {
+    //     yPercent: 5,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".clusterGreat",
+    //         end: "bottom center",
+    //         scrub: 1
+    //     },
+    // });
 
     gsap.to('.zoom-image', {
         scale: 1, // Scale to which you want to zoom in
@@ -542,33 +542,108 @@
         },
     });
 
-    $(document).ready(function(){
-        function isHoveringClassRemove() {
-            return $('.class-remove:hover').length > 0;
+    
+    // sticky-sec
+    $(window).scroll(function () {
+        var navbar = $("#sticky-sec");
+        if (navbar.length === 0) {
+            return;
         }
-        $('.class-remove').hover(
-            function() {
-                $('.multi-section').removeClass('add-black');
-            }, function() {
-                if (!isHoveringClassRemove()) {
-                    $('.multi-section').addClass('add-black');
-                }
-            }
-        );
-    
-        $('.multi-item').hover(
-            function() {
-                if (!isHoveringClassRemove()) {
-                    $('.multi-section').addClass('add-black');
-                }
-            }, function() {
-                if (!isHoveringClassRemove()) {
-                    $('.multi-section').addClass('add-black');
-                }
-            }
-        );
+
+        var sticky = navbar.offset().top;
+
+        if ($(window).scrollTop() >= sticky) {
+            navbar.addClass("add-black");
+        } else {
+            navbar.removeClass("add-black");
+        }
+
+        if ($(window).scrollTop() === 0) {
+            navbar.removeClass("add-black");
+        }
     });
+
+    // $(document).ready(function(){
+    //     function isHoveringClassRemove() {
+    //         return $('.class-remove:hover').length > 0;
+    //     }
+    //     $('.class-remove').hover(
+    //         function() {
+    //             $('.multi-section').removeClass('add-black');
+    //         }, function() {
+    //             if (!isHoveringClassRemove()) {
+    //                 $('.multi-section').addClass('add-black');
+    //             }
+    //         }
+    //     );
     
+    //     $('.multi-item').hover(
+    //         function() {
+    //             if (!isHoveringClassRemove()) {
+    //                 $('.multi-section').addClass('add-black');
+    //             }
+    //         }, function() {
+    //             if (!isHoveringClassRemove()) {
+    //                 $('.multi-section').addClass('add-black');
+    //             }
+    //         }
+    //     );
+    // });
+    
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Screen Width
+        const screen_width = window.screen.width;
+      
+        // Check if the element exists and has the required class
+        const smoothAnimateElement = document.querySelector("#smooth-animate");
+        if (smoothAnimateElement && smoothAnimateElement.classList.contains("smooth-scrool-animate")) {
+          const smoother = ScrollSmoother.create({
+            effects: screen_width < 1025 ? false : true,
+            smooth: 1.35,
+            ignoreMobileResize: true,
+            normalizeScroll: false,
+            smoothTouch: 0.1,
+          });
+        }
+      });
+
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const images = [];
+        const totalFrames = 360; // Adjust to the number of images you have
+        const sequence = document.getElementById("sequence");
+      
+        // Preload images
+        for (let i = 0; i < totalFrames; i++) {
+          const img = new Image();
+          img.src = `assets/02/02_${String(i).padStart(4, '0')}.png`;
+          images.push(img);
+        }
+      
+        gsap.registerPlugin(ScrollTrigger);
+      
+        const obj = { frame: totalFrames - 1 };
+      
+        function updateImage() {
+          const imgIndex = Math.max(0, Math.floor(obj.frame));
+          sequence.src = images[imgIndex].src;
+        }
+      
+        gsap.to(obj, {
+          frame: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".image-sequence-container",
+            start: "top top",
+            end: "+=100%", 
+            scrub: true,
+            pin: true,
+            onUpdate: updateImage
+          }
+        });
+      });
+      
 
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
