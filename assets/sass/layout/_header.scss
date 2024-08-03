@@ -4,6 +4,60 @@
 
 /* 2.2 navigation */
 
+
+.marquee {
+    position: relative;
+    height: 30px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+	background: $theme-primary-color;
+}
+
+.marquee ul {
+    animation: marquee 25s linear infinite;
+    display: flex;
+    position: absolute;
+    width: 600%;
+    flex-wrap: nowrap;
+
+    @media(max-width:575px) {
+        width: 900%;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.marquee ul li {
+	font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+    float: left;
+    padding: 15px 30px;
+    color: $black;
+    line-height: 1em;
+    position: relative;
+
+    @media(max-width:575px) {
+        padding: 15px 20px;
+    }
+}
+
+.marquee ul li:first-child {
+    padding-left: 0;
+}
+
+
 .site-header {
 	/* navigation open and close btn hide for width screen */
 	/* style for navigation less than 992px */
@@ -38,6 +92,16 @@
 		top: 0;
 		z-index: 55;
 	}
+
+	&.header-style-2 {
+		background-color: #0006;
+		position: relative;
+		
+		@media(min-width:991px){
+			backdrop-filter: blur(10px);
+		}
+	}
+	
 }
 
 .site-header .navigation>.container {

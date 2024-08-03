@@ -608,43 +608,18 @@
         }
       });
 
-      
-      document.addEventListener("DOMContentLoaded", () => {
-        const images = [];
-        const totalFrames = 360; // Adjust to the number of images you have
-        const sequence = document.getElementById("sequence");
-      
-        // Preload images
-        for (let i = 0; i < totalFrames; i++) {
-          const img = new Image();
-          img.src = `assets/02/02_${String(i).padStart(4, '0')}.png`;
-          images.push(img);
+      gsap.to(".product-single-image", {
+        scrollTrigger: {
+          trigger: ".product-right",
+          start: "top top",
+          end: "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+          scrub: true
         }
-      
-        gsap.registerPlugin(ScrollTrigger);
-      
-        const obj = { frame: totalFrames - 1 };
-      
-        function updateImage() {
-          const imgIndex = Math.max(0, Math.floor(obj.frame));
-          sequence.src = images[imgIndex].src;
-        }
-      
-        gsap.to(obj, {
-          frame: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".image-sequence-container",
-            start: "top top",
-            end: "+=100%", 
-            scrub: true,
-            pin: true,
-            onUpdate: updateImage
-          }
-        });
       });
-      
 
+      
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/
@@ -667,83 +642,12 @@
     })
 
 
-    /*------------------------------------------
-        = CONTACT FORM SUBMISSION
-    -------------------------------------------*/
-    if ($("#contact-form-main").length) {
-        $("#contact-form-main").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-
-                email: "required",
-
-                adress: "required",
-
-                name: "required",
-
-                lname: "required",
-
-                service: "required",
-
-                phone: "required",
-
-                note: "required",
-
-                subject: {
-                    required: true
-                }
-
-
-            },
-
-            messages: {
-                name: "Please enter your name",
-                lname: "Please enter your Last name",
-                email: "Please enter your email",
-                adress: "Please enter your adress",
-                phone: "Please enter your Phone",
-                service: "Please select your contact service",
-                note: "Please enter your comment"
-            },
-
-            submitHandler: function (form) {
-                $.ajax({
-                    type: "POST",
-                    url: "mail-contact.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $("#loader").hide();
-                        $("#success").slideDown("slow");
-                        setTimeout(function () {
-                            $("#success").slideUp("slow");
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function () {
-                        $("#loader").hide();
-                        $("#error").slideDown("slow");
-                        setTimeout(function () {
-                            $("#error").slideUp("slow");
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
-
-        });
-    }
-
-
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
 
         preloader();
-
 
         toggleMobileNavigation();
 
