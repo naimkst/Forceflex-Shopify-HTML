@@ -342,6 +342,40 @@
 
     }
 
+    /*------------------------------------------
+    mobail-active
+    -------------------------------------------*/
+    $(document).ready(function () {
+        function activateOwlCarousel() {
+            if ($(window).width() <= 991) {
+                if ($(".mobail-active").length) {
+                    $(".mobail-active").owlCarousel({
+                        autoplay: true,
+                        smartSpeed: 300,
+                        margin: 0,
+                        loop: true,
+                        items: 1,
+                        autoplayHoverPause: true,
+                        dots: true,
+                        nav: false
+                    });
+                }
+            } else {
+                if ($(".mobail-active").hasClass("owl-carousel")) {
+                    $(".mobail-active").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+                    $(".mobail-active").find('.owl-stage-outer').children().unwrap();
+                }
+            }
+        }
+
+        activateOwlCarousel();
+
+        $(window).resize(function () {
+            activateOwlCarousel();
+        });
+    });
+
+
     $(document).ready(function () {
         $('.product-popup').magnificPopup({
             type: 'image',
@@ -428,7 +462,7 @@
         },
     });
 
-    
+
     // sticky-sec
     $(window).scroll(function () {
         var navbar = $("#sticky-sec");
@@ -462,7 +496,7 @@
     //             }
     //         }
     //     );
-    
+
     //     $('.multi-item').hover(
     //         function() {
     //             if (!isHoveringClassRemove()) {
@@ -475,37 +509,37 @@
     //         }
     //     );
     // });
-    
+
 
     document.addEventListener("DOMContentLoaded", () => {
         // Screen Width
         const screen_width = window.screen.width;
-      
+
         // Check if the element exists and has the required class
         const smoothAnimateElement = document.querySelector("#smooth-animate");
         if (smoothAnimateElement && smoothAnimateElement.classList.contains("smooth-scrool-animate")) {
-          const smoother = ScrollSmoother.create({
-            effects: screen_width < 1025 ? false : true,
-            smooth: 1.35,
-            ignoreMobileResize: true,
-            normalizeScroll: false,
-            smoothTouch: 0.1,
-          });
+            const smoother = ScrollSmoother.create({
+                effects: screen_width < 1025 ? false : true,
+                smooth: 1.35,
+                ignoreMobileResize: true,
+                normalizeScroll: false,
+                smoothTouch: 0.1,
+            });
         }
-      });
+    });
 
-      gsap.to(".product-single-image", {
+    gsap.to(".product-single-image", {
         scrollTrigger: {
-          trigger: ".product-right",
-          start: "top top",
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          scrub: true
+            trigger: ".product-right",
+            start: "top top",
+            end: "bottom bottom",
+            pin: true,
+            pinSpacing: false,
+            scrub: true
         }
-      });
+    });
 
-      
+
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/

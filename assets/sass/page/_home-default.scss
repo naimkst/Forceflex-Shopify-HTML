@@ -914,7 +914,15 @@
         border-radius: 12px;
         align-items: center;
 
+        @media(max-width:767px) {
+            flex-wrap: wrap;
+        }
+
         .cta-text {
+            @media(max-width:767px) {
+                margin-bottom: 20px;
+            }
+
             h3 {
                 color: $white;
                 margin-bottom: 5px;

@@ -14,6 +14,11 @@
     }
 
     .product-single-image {
+        padding-left: 0;
+
+        @media(max-width:991px) {
+            padding-right: 0;
+        }
 
         &::-webkit-scrollbar {
             width: 6px;
@@ -59,6 +64,10 @@
                     min-height: 400px;
                 }
 
+                @media(max-width:991px) {
+                    width: 100%;
+                }
+
                 @media(max-width:767px) {
                     min-height: auto;
                 }
@@ -73,6 +82,39 @@
                     img {
                         transform: scale(1.12);
                     }
+                }
+            }
+        }
+
+        .owl-nav {
+            display: none;
+        }
+
+        .owl-dots {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+            max-width: 136px;
+            border-radius: 20px;
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            height: 20px;
+            line-height: 16px;
+
+            button {
+                border: none;
+                margin: 0 5px;
+                width: 6px;
+                height: 6px;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 0;
+
+                &.active {
+                    background: $white;
+                    width: 25px;
                 }
             }
         }
@@ -278,6 +320,9 @@
                 text-align: center;
                 display: block;
                 margin-bottom: 10px;
+                font-family: "Space Grotesk", sans-serif;
+                text-transform: uppercase;
+                padding: 12px 32px;
 
                 &:last-child {
                     background: $theme-primary-color;
@@ -444,5 +489,28 @@
 
     .lower-footer .row {
         border-color: #0000001a;
+    }
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 15px;
+    display: none;
+
+    @media(max-width:991px) {
+       display: block;
+    }
+
+    .theme-btn {
+        width: 100%;
+        text-align: center;
+        background: #ff2600;
+        color: #fff;
+        font-family: "Space Grotesk", sans-serif;
+        text-transform: uppercase;
+        border: 0;
+        padding: 12px 32px;
     }
 }

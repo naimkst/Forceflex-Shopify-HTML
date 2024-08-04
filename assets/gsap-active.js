@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: ".image-sequence-container",
         start: "top top",
-        end: "+=100%", 
+        end: "+=20%", 
         scrub: true,
         pin: true,
         onUpdate: updateImage

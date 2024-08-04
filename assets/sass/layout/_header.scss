@@ -6,55 +6,81 @@
 
 
 .marquee {
-    position: relative;
-    height: 30px;
-    padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+	position: relative;
+	height: 30px;
+	padding: 5px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	background: $theme-primary-color;
+
+	&:after {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 220px;
+		height: 100%;
+		content: "";
+		z-index: 11;
+		background: linear-gradient(86deg, rgb(255 38 0) 0%, rgba(8, 37, 77, 0) 100%);
+		transform: rotate(-180deg);
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 220px;
+		height: 100%;
+		content: "";
+		z-index: 11;
+		background: linear-gradient(260deg, rgb(255 38 0) 0%, rgba(8, 37, 77, 0) 100%);
+		transform: rotate(-180deg);
+	}
 }
 
-.marquee ul {
-    animation: marquee 25s linear infinite;
-    display: flex;
-    position: absolute;
-    width: 600%;
-    flex-wrap: nowrap;
 
-    @media(max-width:575px) {
-        width: 900%;
-    }
+
+.marquee ul {
+	animation: marquee 25s linear infinite;
+	display: flex;
+	position: absolute;
+	width: 600%;
+	flex-wrap: nowrap;
+
+	@media(max-width:575px) {
+		width: 900%;
+	}
 }
 
 @keyframes marquee {
-    0% {
-        left: 0;
-    }
+	0% {
+		left: 0;
+	}
 
-    100% {
-        left: -100%;
-    }
+	100% {
+		left: -100%;
+	}
 }
 
 .marquee ul li {
 	font-size: 12px;
-    font-weight: 700;
-    line-height: 28px;
-    float: left;
-    padding: 15px 30px;
-    color: $black;
-    line-height: 1em;
-    position: relative;
+	font-weight: 700;
+	line-height: 28px;
+	float: left;
+	padding: 15px 30px;
+	color: $black;
+	line-height: 1em;
+	position: relative;
 
-    @media(max-width:575px) {
-        padding: 15px 20px;
-    }
+	@media(max-width:575px) {
+		padding: 15px 20px;
+	}
 }
 
 .marquee ul li:first-child {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 
@@ -81,8 +107,9 @@
 .site-header {
 	&.header-style-1 {
 		background: $black;
-		@media(max-width:991px){
-		   position: relative;
+
+		@media(max-width:991px) {
+			position: relative;
 		}
 	}
 
@@ -96,12 +123,12 @@
 	&.header-style-2 {
 		background-color: #0006;
 		position: relative;
-		
-		@media(min-width:991px){
+
+		@media(min-width:991px) {
 			backdrop-filter: blur(10px);
 		}
 	}
-	
+
 }
 
 .site-header .navigation>.container {
@@ -136,7 +163,7 @@
 	transition: all 0.5s;
 }
 
-.site-header #navbar>ul>li a{
+.site-header #navbar>ul>li a {
 	&:before {
 		position: absolute;
 		left: 50%;
@@ -630,9 +657,9 @@
 		}
 
 		&::-webkit-scrollbar {
-            width: 6px;
-            display: none;
-        }
+			width: 6px;
+			display: none;
+		}
 	}
 
 	.mini-cart-item {
