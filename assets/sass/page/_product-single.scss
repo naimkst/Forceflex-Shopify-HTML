@@ -65,9 +65,17 @@
                 }
 
                 @media(max-width:991px) {
+                    height: 750px;
                     width: 100%;
                 }
+                @media(max-width:575px) {
+                    height: 550px;
+                }
 
+                @media(max-width:450px) {
+                    height: 400px;
+                }
+                
                 @media(max-width:767px) {
                     min-height: auto;
                 }
@@ -125,6 +133,18 @@
 
         video {
             width: 100%;
+
+            @media(max-width:991px) {
+                height: 750px;
+                object-fit: cover;
+            }
+
+            @media(max-width:575px) {
+                height: 550px;
+            }
+            @media(max-width:450px) {
+                height: 400px;
+            }
         }
     }
 
@@ -314,6 +334,18 @@
             margin-top: 20px;
             margin-bottom: 20px;
 
+            @media(max-width:991px) {
+                display: none;
+            }
+
+            &.mobail {
+                display: none;
+
+                @media(max-width:991px) {
+                    display: block;
+                }
+            }
+
             .theme-btn {
                 width: 100%;
                 background-color: #f5f5f5;
@@ -500,7 +532,7 @@
     display: none;
 
     @media(max-width:991px) {
-       display: block;
+        display: block;
     }
 
     .theme-btn {
