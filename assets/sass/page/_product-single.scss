@@ -1,15 +1,25 @@
 /*--------------------------------------------------------------
 15. shop-single-page
 --------------------------------------------------------------*/
+.page-wrapper.s2 {
+    overflow: hidden;
+    position: relative;
+}
+
 .shop-single-section {
     padding: 80px 0;
+    overflow: hidden;
 
+    .pin-spacer {
+        height: auto !important;
+    }
 
     .product-right {
         @media(max-width:991px) {
             transform: unset !important;
             position: static !important;
             max-height: 100% !important;
+            height: 100% !important;
         }
     }
 
@@ -50,11 +60,10 @@
                 min-height: auto;
             }
 
-            .product-popup {
+            .p-img {
                 background: #f5f5f5;
                 padding: 40px;
                 min-height: 715px;
-                cursor: zoom-in;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -68,6 +77,7 @@
                     height: 750px;
                     width: 100%;
                 }
+
                 @media(max-width:575px) {
                     height: 550px;
                 }
@@ -75,7 +85,7 @@
                 @media(max-width:450px) {
                     height: 400px;
                 }
-                
+
                 @media(max-width:767px) {
                     min-height: auto;
                 }
@@ -109,7 +119,9 @@
             bottom: 30px;
             transform: translateX(-50%);
             height: 20px;
-            line-height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             button {
                 border: none;
@@ -142,6 +154,7 @@
             @media(max-width:575px) {
                 height: 550px;
             }
+
             @media(max-width:450px) {
                 height: 400px;
             }

@@ -3797,14 +3797,24 @@ img {
 /*--------------------------------------------------------------
 15. shop-single-page
 --------------------------------------------------------------*/
+.page-wrapper.s2 {
+  overflow: hidden;
+  position: relative;
+}
+
 .shop-single-section {
   padding: 80px 0;
+  overflow: hidden;
+}
+.shop-single-section .pin-spacer {
+  height: auto !important;
 }
 @media (max-width: 991px) {
   .shop-single-section .product-right {
     transform: unset !important;
     position: static !important;
     max-height: 100% !important;
+    height: 100% !important;
   }
 }
 .shop-single-section .product-single-image {
@@ -3844,47 +3854,46 @@ img {
     min-height: auto;
   }
 }
-.shop-single-section .product-single-image .col .product-popup {
+.shop-single-section .product-single-image .col .p-img {
   background: #f5f5f5;
   padding: 40px;
   min-height: 715px;
-  cursor: zoom-in;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 @media (max-width: 1399px) {
-  .shop-single-section .product-single-image .col .product-popup {
+  .shop-single-section .product-single-image .col .p-img {
     min-height: 400px;
   }
 }
 @media (max-width: 991px) {
-  .shop-single-section .product-single-image .col .product-popup {
+  .shop-single-section .product-single-image .col .p-img {
     height: 750px;
     width: 100%;
   }
 }
 @media (max-width: 575px) {
-  .shop-single-section .product-single-image .col .product-popup {
+  .shop-single-section .product-single-image .col .p-img {
     height: 550px;
   }
 }
 @media (max-width: 450px) {
-  .shop-single-section .product-single-image .col .product-popup {
+  .shop-single-section .product-single-image .col .p-img {
     height: 400px;
   }
 }
 @media (max-width: 767px) {
-  .shop-single-section .product-single-image .col .product-popup {
+  .shop-single-section .product-single-image .col .p-img {
     min-height: auto;
   }
 }
-.shop-single-section .product-single-image .col .product-popup img {
+.shop-single-section .product-single-image .col .p-img img {
   transform: scale(1);
   transition: all 0.6s;
 }
-.shop-single-section .product-single-image .col .product-popup:hover img {
+.shop-single-section .product-single-image .col .p-img:hover img {
   transform: scale(1.12);
 }
 .shop-single-section .product-single-image .owl-nav {
@@ -3901,7 +3910,9 @@ img {
   bottom: 30px;
   transform: translateX(-50%);
   height: 20px;
-  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .shop-single-section .product-single-image .owl-dots button {
   border: none;

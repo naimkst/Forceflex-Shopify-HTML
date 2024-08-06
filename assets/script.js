@@ -350,7 +350,7 @@
             if ($(window).width() <= 991) {
                 if ($(".mobail-active").length) {
                     $(".mobail-active").owlCarousel({
-                        autoplay: true,
+                        autoplay: false,
                         smartSpeed: 300,
                         margin: 0,
                         loop: true,
