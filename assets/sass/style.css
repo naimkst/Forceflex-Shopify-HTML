@@ -1262,7 +1262,7 @@ img {
 }
 @media (max-width: 575px) {
   .marquee ul li {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
 }
 
@@ -4052,6 +4052,9 @@ img {
 }
 .shop-single-section .product-details .tag-wrap ul li input:checked ~ label {
   border-color: #ff2600;
+}
+.shop-single-section .product-details .qty-btn-wrap {
+  margin-bottom: 20px;
 }
 .shop-single-section .product-details .qty-btn-wrap span {
   font-size: 16px;

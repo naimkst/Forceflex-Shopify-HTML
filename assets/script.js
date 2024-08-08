@@ -244,7 +244,7 @@
     -------------------------------------------*/
     if ($(".product-active").length) {
         $(".product-active").owlCarousel({
-            autoplay: true,
+            autoplay: false,
             smartSpeed: 300,
             margin: 20,
             loop: true,
@@ -302,7 +302,7 @@
     -------------------------------------------*/
     if ($(".category-active").length) {
         $(".category-active").owlCarousel({
-            autoplay: true,
+            autoplay: false,
             smartSpeed: 300,
             margin: 20,
             loop: true,
