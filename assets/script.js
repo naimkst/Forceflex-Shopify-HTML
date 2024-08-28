@@ -319,7 +319,7 @@
                     items: 1,
                 },
                 500: {
-                    items: 2,
+                    items: 1,
                 },
 
                 768: {
@@ -335,6 +335,51 @@
 
                 1400: {
                     items: 4
+                },
+
+            }
+        });
+
+    }
+
+    /*------------------------------------------
+      unique-category-active
+    -------------------------------------------*/
+    if ($(".unique-category-active").length) {
+        $(".unique-category-active").owlCarousel({
+            autoplay: false,
+            smartSpeed: 300,
+            margin: 20,
+            loop: true,
+            autoplayHoverPause: true,
+            dots: false,
+            navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                350: {
+                    items: 1,
+                },
+                500: {
+                    items: 2,
+                },
+
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+
+                1200: {
+                    items: 4
+                },
+
+                1400: {
+                    items: 5
                 },
 
             }

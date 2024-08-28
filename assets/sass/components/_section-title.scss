@@ -14,12 +14,14 @@
 	h2 {
 		font-size: 32px;
 		font-style: normal;
-		font-weight: 900;
+		font-weight: 500;
 		line-height: 1.1em;
 		text-transform: uppercase;
 		margin-top: 0;
 		color: $dark-gray;
 		line-height: 1.125;
+		display: flex;
+		align-items: center;
 
 		@include media-query(767px) {
 			font-size: 32px;
@@ -29,6 +31,19 @@
 		@include media-query(450px) {
 			font-size: 23px;
 			line-height: 30px;
+			flex-wrap: wrap;
+		}
+
+		a {
+          font-size: 18px;
+		  color: $black;
+		  font-weight: 700;
+		  text-decoration: underline;
+		  margin-left: 20px;
+
+		  @include media-query(575px) {
+			 font-size: 15px;
+		}
 		}
 
 	}

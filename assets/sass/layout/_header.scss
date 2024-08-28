@@ -106,8 +106,6 @@
 
 .site-header {
 	&.header-style-1 {
-		background: $black;
-
 		@media(max-width:991px) {
 			position: relative;
 		}
@@ -451,7 +449,7 @@
 
 .site-header .header-right .fi {
 	font-size: 25px;
-	color: $white;
+	color: $black;
 
 	@media(max-width:450px) {
 		font-size: 22px;
@@ -1047,13 +1045,13 @@
 			>ul>li>a {
 				font-size: 14px;
 				font-style: normal;
-				font-weight: 600;
+				font-weight: 400;
 				line-height: 20px;
-				text-transform: capitalize;
+				text-transform: uppercase;
 				padding: 22px 30px;
 				display: block;
 				position: relative;
-				color: $white;
+				color: $black;
 				letter-spacing: -0.03em;
 				font-family: "Inter", sans-serif;
 			}
@@ -1068,7 +1066,7 @@
 					transform: translateY(-50%);
 					content: "\e64b";
 					font-family: "themify";
-					color: $white;
+					color: $black;
 					font-size: 12px;
 
 					@media(max-width: 1300px) {
