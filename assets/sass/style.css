@@ -1386,9 +1386,6 @@ img {
     /*** hover effect ***/
     padding-left: 0;
   }
-  .site-header #navbar li {
-    position: relative;
-  }
   .site-header #navbar > ul > li > .sub-menu > .menu-item-has-children > a {
     position: relative;
   }
@@ -2116,9 +2113,218 @@ img {
 }
 
 .site-header {
+  position: relative;
   /* navigation open and close btn hide for width screen */
   /* style for navigation less than 992px */
   /*navbar collaps less then 992px*/
+}
+.site-header .mega-sub-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  background: #fff;
+  left: 0;
+  padding: 40px 50px;
+  top: 100%;
+  z-index: 10;
+  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform-origin: center top 0;
+  -webkit-transform-origin: center top 0;
+  -moz-transform-origin: center top 0;
+  -ms-transform-origin: center top 0;
+  -o-transform-origin: center top 0;
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  visibility: hidden;
+}
+.site-header .mega-sub-menu .row {
+  width: auto;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-left p {
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  font-family: "Space Grotesk", sans-serif;
+  margin-bottom: 20px;
+  color: #000;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-left ul li a {
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  color: #b5b5b5;
+  font-family: "Space Grotesk", sans-serif;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-left ul li a::before {
+  display: none;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-left ul li + li {
+  margin-top: 20px;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-right a {
+  color: #b5b5b5;
+  font-family: "Space Grotesk", sans-serif;
+  display: block;
+  margin-bottom: 10px;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-right a span {
+  font-size: 13px;
+  color: #b5b5b5;
+  margin-left: 10px;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-right a::before {
+  display: none;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .mega-menu-right .mega-img img {
+  max-height: 410px;
+  object-fit: cover;
+  width: 100%;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .product-img a {
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  color: #b5b5b5;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+.site-header .mega-sub-menu .mega-menu-wrap .product-img a:before {
+  display: none;
+}
+.site-header .mega-menu-area:hover .mega-sub-menu {
+  opacity: 1;
+  top: 100%;
+  transform: scaleY(100%);
+  -webkit-transform: scaleY(100%);
+  -moz-transform: scaleY(100%);
+  -ms-transform: scaleY(100%);
+  -o-transform: scaleY(100%);
+  visibility: visible;
+}
+.site-header .mobail-menu-area {
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  z-index: 111;
+  transition: all 0.3s;
+}
+@media (min-width: 992px) {
+  .site-header .mobail-menu-area {
+    display: none;
+  }
+}
+.site-header .mobail-menu-area.show-mobail-menu {
+  left: 0;
+}
+.site-header .mobail-menu-area h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.site-header .mobail-menu-area .m-top {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .mobail-menu-area .m-top .close-btn {
+  background: none;
+  border: none;
+}
+.site-header .mobail-menu-area .search-area {
+  margin-bottom: 30px;
+}
+.site-header .mobail-menu-area .search-area form {
+  position: relative;
+}
+.site-header .mobail-menu-area .search-area input {
+  width: 100%;
+  border-radius: 99px;
+  background: #f8f8f8;
+  height: 48px;
+  border: 0;
+  padding: 10px;
+  padding-left: 60px;
+}
+.site-header .mobail-menu-area .search-area button {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background: none;
+  border: 0;
+  font-size: 20px;
+}
+.site-header .mobail-menu-area .mobail-tabs {
+  padding: 24px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding-top: 14px;
+}
+.site-header .mobail-menu-area .mobail-tabs ul {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.site-header .mobail-menu-area .mobail-tabs ul li {
+  flex-basis: 50%;
+}
+.site-header .mobail-menu-area .mobail-tabs ul li button {
+  width: 100%;
+  background: none;
+  border: 0;
+  color: #b5b5b5;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+}
+.site-header .mobail-menu-area .mobail-tabs ul li button.active {
+  border-color: #000;
+}
+.site-header .mobail-menu-area .mobail-tabs .tab-pane {
+  overflow-x: auto;
+}
+.site-header .mobail-menu-area .mobail-tabs .tab-pane .product-area {
+  width: 910px;
+}
+.site-header .mobail-menu-area .mobail-tabs .product-area {
+  place-content: center flex-start;
+  align-items: center;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: row;
+  gap: 8px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+.site-header .mobail-menu-area .mobail-tabs .product-area .product-img a {
+  display: block;
+}
+.site-header .mobail-menu-area .mobail-tabs .menu {
+  margin-top: 30px;
+}
+.site-header .mobail-menu-area .mobail-tabs .menu ul {
+  border: 0;
+  margin-bottom: 0;
+}
+.site-header .mobail-menu-area .mobail-tabs .menu ul li + li {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.site-header .mobail-menu-area .mobail-tabs .menu ul li a {
+  color: #171717;
 }
 .site-header .navigation {
   background-color: transparent;
@@ -2153,9 +2359,6 @@ img {
 @media screen and (min-width: 992px) {
   .site-header #navbar {
     /*** hover effect ***/
-  }
-  .site-header #navbar li {
-    position: relative;
   }
   .site-header #navbar > ul > li > a {
     font-size: 14px;
@@ -4023,6 +4226,12 @@ img {
   .unique-category-section .unique-category .owl-nav .owl-next {
     right: 20px;
   }
+}
+
+.video-sec video {
+  width: 100%;
+  height: 100%;
+  max-width: 738px;
 }
 
 /*--------------------------------------------------------------
