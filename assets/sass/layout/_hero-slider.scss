@@ -4,7 +4,8 @@
 
 // static-hero
 .hero-slider,
-.static-hero {
+.static-hero,
+.hero-slider-s2 {
 	width: 100%;
 	height: 1000px;
 	min-height: 758px;
@@ -171,5 +172,31 @@
 		justify-content: center;
 		align-items: center;
 		text-align: left;
+	}
+}
+
+
+.hero-slider-s2 {
+	height: 730px;
+
+	@include media-query(1199px) {
+		height: 500px;
+	}
+	@include media-query(767px) {
+		height: 400px;
+	}
+
+	.slide-inner  {
+       align-items: flex-end;
+
+	   .slide-content {
+		padding-bottom: 50px;
+
+		h2 {
+			font-size: 32px;
+			margin-bottom: 0;
+			line-height: 45px;
+		}
+	   }
 	}
 }
