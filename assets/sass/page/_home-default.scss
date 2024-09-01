@@ -12,6 +12,11 @@
         h2 {
             font-size: 40px;
             line-height: 1.1em;
+
+            @media(max-width:991px){
+                font-size: 28px;
+                line-height: 1.1em;
+            }
         }
     }
 
@@ -156,10 +161,14 @@
 
             @media(max-width:1440px) {
                 min-height: 400px;
+                min-height: 400px;
             }
 
             @media(max-width:991px) {
                 min-height: 300px;
+            }
+            @media(max-width:575px) {
+                min-height: auto;
             }
 
             img {
@@ -408,6 +417,10 @@
             transition: all .3s;
             border: 1px solid #f2f2f2;
 
+            @include media-query(991px) {
+                display: none;
+            }
+
             i {
                 color: $dark-gray;
             }
@@ -467,8 +480,8 @@
             left: 0;
             bottom: 0;
 
-            @media(max-width:767px) {
-                padding: 30px;
+            @media(max-width:991px) {
+                padding: 20px;
             }
 
             h2 {
@@ -479,7 +492,7 @@
                 margin-bottom: 20px;
 
                 @media(max-width:767px) {
-                    font-size: 30px;
+                    font-size: 28px;
                     line-height: 1.1em;
                 }
             }
@@ -953,9 +966,9 @@
 
 .video-section {
     .video-item {
-        iframe {
+        text-align: center;
+        video {
             width: 100%;
-            height: 500px;
             border-radius: 15px;
         }
     }
@@ -1029,7 +1042,7 @@
                     min-height: 640px;
                 }
 
-                @media(max-width:575px) {
+                @media(max-width:991px) {
                     max-height: 500px;
                     min-height: 500px;
                 }
@@ -1075,7 +1088,7 @@
                         min-height: 640px;
                     }
 
-                    @media(max-width:575px) {
+                    @media(max-width:991px) {
                         max-height: 500px;
                         min-height: 500px;
                     }
@@ -1123,6 +1136,10 @@
             border-radius: 50%;
             transition: all .3s;
             border: 1px solid #f2f2f2;
+
+            @include media-query(991px) {
+                display: none;
+            }
 
             i {
                 color: $dark-gray;

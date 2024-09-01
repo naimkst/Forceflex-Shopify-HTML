@@ -110,7 +110,7 @@ img {
     padding-left: 60px;
 
     @media(max-width:991px){
-        padding-left: 15px;
+        padding-left: 10px;
     }
 
     .container-fluid {
@@ -295,4 +295,13 @@ img {
 
 .fancybox-wrap {
     z-index: 99999 !important;
+}
+
+
+
+.no-controls::-webkit-media-controls {
+    display: none !important;
+}
+.no-controls {
+    pointer-events: none;
 }

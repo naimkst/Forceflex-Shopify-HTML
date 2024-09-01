@@ -53,12 +53,12 @@
         }
     }
 
-    $(document).ready(function() {
-        $('.open-btn').on('click', function() {
+    $(document).ready(function () {
+        $('.open-btn').on('click', function () {
             $('.mobail-menu-area').addClass('show-mobail-menu');
         });
-    
-        $('.close-btn').on('click', function() {
+
+        $('.close-btn').on('click', function () {
             $('.mobail-menu-area').removeClass('show-mobail-menu');
         });
     });
@@ -496,6 +496,12 @@
         }, 700);
         return false;
     })
+
+    // JavaScript to remove the controls attribute if it's present
+    const videoElements = document.querySelectorAll('.no-controls');
+    videoElements.forEach(video => {
+        video.removeAttribute('controls');
+    });
 
 
     /*==========================================================================

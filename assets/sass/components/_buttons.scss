@@ -15,6 +15,7 @@
 	position: relative;
 	border-radius: 99px;
 	font-family: $heading-font;
+	text-align: center;
 
 	&:hover,
 	&:focus,
@@ -25,9 +26,7 @@
 	}
 
 	@include media-query(767px) {
-		padding: 12px 18px;
-		font-size: 14px;
-		padding-right: 35px;
+		padding: 12px 25px;
 	}
 }
 

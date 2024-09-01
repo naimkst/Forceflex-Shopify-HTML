@@ -22,28 +22,33 @@
 		line-height: 1.125;
 		display: flex;
 		align-items: center;
-
-		@include media-query(767px) {
-			font-size: 32px;
-			line-height: 40px;
+		
+		@include media-query(991px) {
+			font-size: 28px;
+			letter-spacing: -0.03em;
+			line-height: 1.1em;
+			padding-right: 10px;
+			justify-content: space-between;
 		}
 
-		@include media-query(450px) {
-			font-size: 23px;
-			line-height: 30px;
-			flex-wrap: wrap;
+		span {
+			@include media-query(991px) {
+				max-width: 200px;
+			}
+		
 		}
+
 
 		a {
-          font-size: 18px;
-		  color: $black;
-		  font-weight: 700;
-		  text-decoration: underline;
-		  margin-left: 20px;
+			font-size: 18px;
+			color: $black;
+			font-weight: 700;
+			text-decoration: underline;
+			margin-left: 20px;
 
-		  @include media-query(575px) {
-			 font-size: 15px;
-		}
+			@include media-query(991px) {
+				font-size: 14px;
+			}
 		}
 
 	}

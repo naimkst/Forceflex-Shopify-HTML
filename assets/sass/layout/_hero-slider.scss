@@ -19,13 +19,8 @@
 	}
 
 	@include media-query(991px) {
-		height: 650px;
-		min-height: 650px;
-	}
-
-	@include media-query(767px) {
-		height: 500px;
-		min-height: auto;
+		height: 700px;
+		min-height: 700px;
 	}
 
 	.video-bg {
@@ -56,8 +51,9 @@
 		max-width: 520px;
 		padding-left: 60px;
 
-		@include media-query(767px) {
-			padding-left: 15px;
+		@include media-query(991px) {
+			padding-left: 0px;
+			padding-bottom: 30px;
 		}
 	}
 
@@ -85,8 +81,8 @@
 		margin-bottom: 20px;
 
 
-		@include media-query(767px) {
-			max-width: 500px;
+		@include media-query(991px) {
+			max-width: 300px;
 		}
 
 		h2 {
@@ -98,14 +94,8 @@
 			color: $black;
 
 			@include media-query(991px) {
-				font-size: 70px;
-				line-height: 80px;
-				margin-bottom: 0;
-			}
-
-			@include media-query(767px) {
-				font-size: 55px;
-				line-height: 60px;
+				font-size: 32px;
+				line-height: 36px;
 			}
 
 			@include media-query(399px) {
@@ -136,12 +126,16 @@
 
 		@include media-query(991px) {
 			padding-top: 0;
+			max-width: 100%;
 		}
 	}
 
 	.slide-btns {
-		@include media-query(991px) {
-			max-width: 400px;
+		.theme-btn {
+			@include media-query(991px) {
+				display: block;
+				text-align: center;
+			}
 		}
 	}
 
@@ -172,6 +166,11 @@
 		justify-content: center;
 		align-items: center;
 		text-align: left;
+
+		@include media-query(991px) {
+			align-items: flex-end;
+		}
+
 	}
 }
 
