@@ -167,11 +167,11 @@
             nav: false,
             responsive: {
                 0: {
-                    items: 1,
+                    items: 2,
                 },
 
                 350: {
-                    items: 1,
+                    items: 2,
                 },
                 500: {
                     items: 2,
@@ -225,14 +225,14 @@
             nav: false,
             responsive: {
                 0: {
-                    items: 1,
+                    items: 2,
                 },
 
                 350: {
-                    items: 1,
+                    items: 2,
                 },
                 500: {
-                    items: 1,
+                    items: 2,
                 },
 
                 768: {
@@ -270,11 +270,11 @@
             nav: false,
             responsive: {
                 0: {
-                    items: 1,
+                    items: 2,
                 },
 
                 350: {
-                    items: 1,
+                    items: 2,
                 },
                 500: {
                     items: 2,
