@@ -70,3 +70,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// style-3
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [];
+  const totalFrames = 301;
+  const sequence = document.getElementById("sequence3");
+
+  // Preload images
+  for (let i = 0; i <= 300; i++) {
+    const img = new Image();
+    img.src = `assets/low/LENTES${String(i).padStart(3, '0')}_LOW.webp`;
+    images.push(img);
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const frameData = { frame: totalFrames - 1 };
+
+  function updateImage() {
+    const imgIndex = Math.max(0, Math.floor(frameData.frame));
+    sequence.src = images[imgIndex].src;
+  }
+
+  gsap.to(frameData, {
+    frame: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".image-sequence-container3",
+      start: "top top",
+      end: "+=20%",
+      scrub: true,
+      pin: true,
+      onUpdate: updateImage
+    }
+  });
+});

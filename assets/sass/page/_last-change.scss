@@ -1,0 +1,18 @@
+// latest change here
+
+@media (min-width: 991px) {
+    .site-header {
+        padding: 0 30px;
+    }
+}
+
+.site-header {
+    #navbar {
+        @media(max-width:1500px){
+             padding-left: 60px;
+        }
+        @media(max-width:991px){
+             padding-left: 0px;
+        }
+    }
+}
