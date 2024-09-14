@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".image-sequence-container",
       start: "top top",
-      end: "+=20%", 
+      end: "+=50%",
       scrub: true,
       pin: true,
       onUpdate: updateImage
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".image-sequence-container2",
       start: "top top",
-      end: "+=20%",
+      end: "+=50%",
       scrub: true,
       pin: true,
       onUpdate: updateImage
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".image-sequence-container3",
       start: "top top",
-      end: "+=20%",
+      end: "+=50%",
       scrub: true,
       pin: true,
       onUpdate: updateImage

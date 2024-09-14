@@ -24,11 +24,10 @@
     function heroSlider() {
         if ($(".hero-slide-wrap").length) {
             $(".hero-slide-wrap").slick({
-                arrows: false,
+                arrows: true,
                 prevArrow: '<button type="button" class="slick-prev">Previous</button>',
                 nextArrow: '<button type="button" class="slick-next">Next</button>',
                 dots: true,
-                fade: true,
                 cssEase: 'linear',
             });
         }
@@ -381,31 +380,31 @@
         $button.parent().find("input").val(newVal);
     });
 
-    // Screen Width
-    var screen_width = window.screen.width;
+    // // Screen Width
+    // var screen_width = window.screen.width;
 
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    // Active GSAP
-    if (document.querySelector("#has_smooth").classList.contains("smooth-scrool-animate")) {
-        const smoother = ScrollSmoother.create({
-            smooth: 1.35,
-            effects: screen_width < 1025 ? false : true,
-            smoothTouch: 0.1,
-            normalizeScroll: false,
-            ignoreMobileResize: true,
-        });
-    }
+    // // Active GSAP
+    // if (document.querySelector("#has_smooth").classList.contains("smooth-scrool-animate")) {
+    //     const smoother = ScrollSmoother.create({
+    //         smooth: 1.35,
+    //         effects: screen_width < 1025 ? false : true,
+    //         smoothTouch: 0.1,
+    //         normalizeScroll: false,
+    //         ignoreMobileResize: true,
+    //     });
+    // }
 
-    gsap.to('.zoom-image', {
-        scale: 1, // Scale to which you want to zoom in
-        scrollTrigger: {
-            trigger: '.multi-item',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-        },
-    });
+    // gsap.to('.zoom-image', {
+    //     scale: 1, // Scale to which you want to zoom in
+    //     scrollTrigger: {
+    //         trigger: '.multi-item',
+    //         start: 'top bottom',
+    //         end: 'bottom top',
+    //         scrub: true,
+    //     },
+    // });
 
 
     // sticky-sec
@@ -456,34 +455,35 @@
     // });
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        // Screen Width
-        const screen_width = window.screen.width;
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     // Screen Width
+    //     const screen_width = window.screen.width;
 
-        // Check if the element exists and has the required class
-        const smoothAnimateElement = document.querySelector("#smooth-animate");
-        if (smoothAnimateElement && smoothAnimateElement.classList.contains("smooth-scrool-animate")) {
-            const smoother = ScrollSmoother.create({
-                effects: screen_width < 1025 ? false : true,
-                smooth: 1.35,
-                ignoreMobileResize: true,
-                normalizeScroll: false,
-                smoothTouch: 0.1,
-            });
-        }
-    });
+    //     // Check if the element exists and has the required class
+    //     const smoothAnimateElement = document.querySelector("#smooth-animate");
+    //     if (smoothAnimateElement && smoothAnimateElement.classList.contains("smooth-scrool-animate")) {
+    //         const smoother = ScrollSmoother.create({
+    //             effects: screen_width < 1025 ? false : true,
+    //             smooth: 1.35,
+    //             ignoreMobileResize: true,
+    //             normalizeScroll: false,
+    //             smoothTouch: 0.1,
+    //         });
 
-    gsap.to(".product-single-image", {
-        scrollTrigger: {
-            trigger: ".product-right",
-            start: "top top",
-            end: "bottom bottom",
-            pin: true,
-            pinSpacing: false,
-            scrub: true
-        }
-    });
+    //         ScrollTrigger.refresh();
+    //     }
+    // });
 
+    // gsap.to(".product-single-image", {
+    //     scrollTrigger: {
+    //         trigger: ".product-right",
+    //         start: "top top",
+    //         end: "bottom bottom",
+    //         pin: true,
+    //         pinSpacing: false,
+    //         scrub: true
+    //     }
+    // });
 
     /*------------------------------------------
         = BACK TO TOP BTN SETTING
@@ -516,16 +516,16 @@
     // dropdown menu
 
     document.querySelectorAll('.menu-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-          e.preventDefault();
-          this.classList.toggle('active');
-          document.querySelectorAll('.menu-item').forEach(other => {
-            if (other !== this) {
-              other.classList.remove('active');
-            }
-          });
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.classList.toggle('active');
+            document.querySelectorAll('.menu-item').forEach(other => {
+                if (other !== this) {
+                    other.classList.remove('active');
+                }
+            });
         });
-      });
+    });
 
 
     /*==========================================================================

@@ -30,8 +30,7 @@
     }
 
     .image-sequence-container,
-    .image-sequence-container2,
-    .image-sequence-container3 {
+    .image-sequence-container2{
         position: relative;
         height: 100vh;
 
@@ -527,10 +526,9 @@
 .multi-section {
     position: relative;
     z-index: 1;
-    padding-top: 150px;
-    padding-bottom: 150px;
     transition: all .3s;
     overflow: hidden;
+    padding: 200px 0;
 
     @media(max-width:991px){
         padding-top: 80px;
@@ -550,6 +548,18 @@
         &::before {
             opacity: 1;
         }
+    }
+
+    .image-sequence {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
 

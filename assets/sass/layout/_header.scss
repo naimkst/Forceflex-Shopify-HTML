@@ -1154,6 +1154,7 @@
 					font-family: $heading-font;
 					display: block;
 					margin-bottom: 10px;
+					text-align: right;
 
 					span {
 						font-size: 13px;
@@ -1332,6 +1333,10 @@
 
 				.product-area {
 					width: 910px;
+
+					@media(max-width:575px){
+						width: 860px;
+					}
 				}
 
 			}

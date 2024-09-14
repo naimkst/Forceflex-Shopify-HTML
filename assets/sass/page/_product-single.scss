@@ -8,13 +8,14 @@
 
 .shop-single-section {
     padding: 80px 0;
-    overflow: hidden;
-
-    .pin-spacer {
-        height: auto !important;
-    }
 
     .product-right {
+        min-height: 100%;
+
+        .product-details {
+            position: sticky;
+            top: 10px;
+        }
         @media(max-width:991px) {
             transform: unset !important;
             position: static !important;
