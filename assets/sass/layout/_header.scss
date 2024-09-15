@@ -1255,6 +1255,7 @@
 		.close-btn {
 			i {
 				font-size: 18px;
+				color: $dark-gray;
 			}
 		}
 
@@ -1294,6 +1295,10 @@
 				background: none;
 				border: 0;
 				font-size: 20px;
+
+				i {
+					color: $dark-gray;
+				}
 			}
 		}
 
@@ -1336,6 +1341,13 @@
 
 					@media(max-width:575px){
 						width: 860px;
+					}
+
+					.product-img {
+						max-width: 136px;
+						img {
+							object-fit: cover;
+						}
 					}
 				}
 
@@ -1386,6 +1398,19 @@
 							padding-top: 20px;
 						}
 
+						.menu-single-item {
+							position: relative;
+							display: block;
+
+							&:before {
+								position: absolute;
+								right: 0;
+								top: 0;
+								content: "\e65a";
+								font-family: 'themify';
+							}
+						}
+
 						.menu-item{
 							position: relative;
 							display: block;
@@ -1394,7 +1419,7 @@
 								position: absolute;
 								right: 0;
 								top: 0;
-								content: "\e649";
+								content: "\e64b";
 								font-family: 'themify';
 							}
 

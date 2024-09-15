@@ -1,5 +1,7 @@
 /*3.2 about-section */
 .about-section {
+    overflow: hidden;
+
     .about-top {
         max-width: 250px;
         margin: 0 auto;
@@ -30,7 +32,7 @@
     }
 
     .image-sequence-container,
-    .image-sequence-container2{
+    .image-sequence-container2 {
         position: relative;
         height: 100vh;
 
@@ -76,6 +78,11 @@
 
 
 // product-selling-section
+
+.product-selling-section {
+    overflow: hidden;
+    padding-top: 20px;
+}
 
 .product-wrap .product-item .product-image .hidden-image {
     display: none;
@@ -135,12 +142,14 @@
             .cart-btn {
                 position: absolute;
                 left: 0;
-                bottom: -100px;
+                bottom: -150px;
                 padding: 30px;
                 z-index: 11;
                 width: 100%;
                 text-align: center;
                 transition: all .3s;
+                opacity: 0;
+                visibility: hidden;
 
                 .theme-btn {
                     display: block;
@@ -155,6 +164,8 @@
             .product-img {
                 .cart-btn {
                     bottom: 0;
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -296,24 +307,24 @@
     .owl-nav .owl-next {
         position: absolute;
         top: -100px;
-        background: #f2f2f2;
+        background: $dark-gray;
         width: 50px;
         height: 50px;
         line-height: 50px;
         border-radius: 50%;
         transition: all .3s;
-        border: 1px solid #f2f2f2;
+        border: 1px solid $dark-gray;
 
         i {
-            color: $dark-gray;
+            color: $white;
         }
 
         &:hover {
-            background: $dark-gray;
-            border-color: $dark-gray;
+            background: #f2f2f2;
+            border-color: #f2f2f2;
 
             i {
-                color: $white;
+                color: $dark-gray;
             }
         }
 
@@ -343,6 +354,8 @@
 // product-category-section
 
 .product-category-section {
+    overflow: hidden;
+
     .product-category {
         margin-right: -200px;
 
@@ -399,7 +412,7 @@
             top: 50%;
             @include translatingY();
         }
-    
+
         .owl-nav [class*=owl-] {
             padding: 0;
             margin: 0;
@@ -408,49 +421,49 @@
             border: 0;
             background: none;
         }
-    
+
         .owl-nav .owl-prev,
         .owl-nav .owl-next {
             position: absolute;
             top: -100px;
-            background: #f2f2f2;
+            background: $dark-gray;
             width: 50px;
             height: 50px;
             line-height: 50px;
             border-radius: 50%;
             transition: all .3s;
-            border: 1px solid #f2f2f2;
-    
+            border: 1px solid $dark-gray;
+
             i {
-                color: $dark-gray;
+                color: $white;
             }
-    
+
             &:hover {
-                background: $dark-gray;
-                border-color: $dark-gray;
-    
+                background: #f2f2f2;
+                border-color: #f2f2f2;
+
                 i {
-                    color: $white;
+                    color: $dark-gray;
                 }
             }
-    
+
             @media(max-width:575px) {
                 display: none;
             }
         }
-    
+
         .owl-nav .owl-prev {
             right: 310px;
             left: auto;
-    
+
             @media(max-width:991px) {
                 right: 80px;
             }
         }
-    
+
         .owl-nav .owl-next {
             right: 250px;
-    
+
             @media(max-width:991px) {
                 right: 20px;
             }
@@ -462,18 +475,21 @@
 // collection-section
 
 .collection-section {
+    overflow: hidden;
+
     .container-fluid {
-        @media(max-width:991px){
-           padding: 0;
+        @media(max-width:991px) {
+            padding: 0;
         }
     }
+
     .collection-item {
         position: relative;
         margin-bottom: 20px;
 
-        @media(max-width:991px){
+        @media(max-width:991px) {
             margin-bottom: 15px;
-         }
+        }
 
         .collection-info {
             padding: 60px;
@@ -530,7 +546,7 @@
     overflow: hidden;
     padding: 200px 0;
 
-    @media(max-width:991px){
+    @media(max-width:991px) {
         padding-top: 80px;
         padding-bottom: 50px;
     }
@@ -622,7 +638,7 @@
             }
         }
     }
-    
+
 }
 
 
@@ -1052,6 +1068,8 @@
 // unique-category-section
 
 .unique-category-section {
+    overflow: hidden;
+
     .unique-category {
         margin-right: -200px;
 
@@ -1085,7 +1103,7 @@
             top: 0px;
             padding: 32px;
 
-            @media(max-width:575px){
+            @media(max-width:575px) {
                 padding: 24px;
             }
 
@@ -1098,7 +1116,7 @@
                 line-height: 1.4em;
                 font-family: $base-font;
 
-                @media(max-width:575px){
+                @media(max-width:575px) {
                     font-size: 28px;
                 }
 
@@ -1166,28 +1184,24 @@
         .owl-nav .owl-next {
             position: absolute;
             top: -100px;
-            background: #f2f2f2;
+            background: $dark-gray;
             width: 50px;
             height: 50px;
             line-height: 50px;
             border-radius: 50%;
             transition: all .3s;
-            border: 1px solid #f2f2f2;
-
-            @include media-query(991px) {
-                display: none;
-            }
+            border: 1px solid $dark-gray;
 
             i {
-                color: $dark-gray;
+                color: $white;
             }
 
             &:hover {
-                background: $dark-gray;
-                border-color: $dark-gray;
+                background: #f2f2f2;
+                border-color: #f2f2f2;
 
                 i {
-                    color: $white;
+                    color: $dark-gray;
                 }
             }
 
@@ -1230,6 +1244,15 @@
 // product-selling-section style
 
 .product-selling-section.style {
+    padding-top: 100px;
+
+    @media(max-width:991px) {
+        padding-top: 90px;
+    }
+
+    @media(max-width:767px) {
+        padding-top: 80px;
+    }
 
     .product-wrap {
         margin-right: 0;
